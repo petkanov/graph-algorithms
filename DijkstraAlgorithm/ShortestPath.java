@@ -24,7 +24,7 @@ public class ShortestPath {
 				
 				double newDistance = actualVertex.getMinDistance() + edge.getWeight();
 				
-				if( newDistance < v.getMinDistance() ){
+				if (newDistance < v.getMinDistance()) {
 					priorityQueue.remove(v);
 					v.setMinDistance(newDistance);
 					v.setPredecessor(actualVertex);
@@ -37,7 +37,7 @@ public class ShortestPath {
 	public List<Vertex> getShortestPathTo(Vertex targetVertex){
 		List<Vertex> path = new ArrayList<>();
 		
-		for(Vertex vertex=targetVertex;vertex!=null;vertex=vertex.getPredecessor()){
+		for(Vertex vertex=targetVertex; vertex!=null; vertex=vertex.getPredecessor()) {
 			path.add(vertex);
 		}
 		
