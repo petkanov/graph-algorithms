@@ -34,20 +34,26 @@ class QuickSort {
             quickSort(arr, pi + 1, high);
         }
     }
+
+    public static void main(String[] args)
+    {
+        int[] arr = { 10, 7, 8, 9, 1, 5 };
+        System.out.println("Given array:");
+        printArr(arr);
+
+        int N = arr.length;
+
+        quickSort(arr, 0, N - 1);
+
+        System.out.println("Sorted array:");
+        printArr(arr);
+    }
+    
     public static void printArr(int[] arr)
     {
         for (int j : arr) {
             System.out.print(j + " ");
         }
-    }
-
-    public static void main(String[] args)
-    {
-        int[] arr = { 10, 7, 8, 9, 1, 5 };
-        int N = arr.length;
-
-        quickSort(arr, 0, N - 1);
-        System.out.println("Sorted array:");
-        printArr(arr);
+        System.out.println();
     }
 }
