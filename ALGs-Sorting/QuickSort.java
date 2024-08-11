@@ -8,30 +8,32 @@ class QuickSort {
         arr[j] = temp;
     }
 
-    static int partition(int[] arr, int low, int high)
+    static int separateElements(int[] arr, int indexLow, int indexHigh)
     {
-        int pivot = arr[high];
+        int separatorIndex = indexLow - 1;
 
-        int needle = (low - 1);
+        for (int i = indexLow; i < indexHigh; i++) {
+            if (arr[i] < arr[indexHigh]) {
+                separatorIndex++;
 
-        for (int j = low; j <= high - 1; j++) {
-            if (arr[j] < pivot) {
-                needle++;
-                swap(arr, needle, j);
+                swap(arr, separatorIndex, i);
             }
         }
-        swap(arr, needle + 1, high);
-        return (needle + 1);
+        separatorIndex++;
+
+        swap(arr, separatorIndex, indexHigh);
+
+        return separatorIndex;
     }
 
-    static void quickSort(int[] arr, int low, int high)
+    static void quickSort(int[] arr, int indexLow, int indexHigh)
     {
-        if (low < high) {
+        if (indexLow < indexHigh) {
 
-            int pi = partition(arr, low, high);
+            int sortedValueIndex = separateElements(arr, indexLow, indexHigh);
 
-            quickSort(arr, low, pi - 1);
-            quickSort(arr, pi + 1, high);
+            quickSort(arr, indexLow, sortedValueIndex - 1);
+            quickSort(arr, sortedValueIndex + 1, indexHigh);
         }
     }
 
@@ -41,9 +43,7 @@ class QuickSort {
         System.out.println("Given array:");
         printArr(arr);
 
-        int N = arr.length;
-
-        quickSort(arr, 0, N - 1);
+        quickSort(arr, 0, arr.length - 1);
 
         System.out.println("Sorted array:");
         printArr(arr);
