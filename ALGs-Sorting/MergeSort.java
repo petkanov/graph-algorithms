@@ -1,4 +1,5 @@
 import java.io.*;
+import java.util.Arrays;
 
 class MergeSort {
 
@@ -75,21 +76,10 @@ class MergeSort {
     {
         int arr[] = {12,11,13,5,6,7,2,3,1};
 
-        System.out.println("Given array is");
-        printArray(arr);
+        System.out.println("Given array is: " + Arrays.toString(arr)); 
 
         sort(arr, 0, arr.length - 1);
 
-        System.out.println("\nSorted array is");
-        printArray(arr);
-    }
-
-    // A utility function to print array of size n
-    static void printArray(int arr[])
-    {
-        int n = arr.length;
-        for (int i = 0; i < n; ++i)
-            System.out.print(arr[i] + " ");
-        System.out.println();
+        System.out.println("\nSorted array is: " + Arrays.toString(arr)); 
     }
 }

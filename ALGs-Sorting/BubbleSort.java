@@ -1,4 +1,4 @@
-
+import java.util.Arrays;
 
 public class BubbleSort {
     public static void bubbleSort(int[] array) {
@@ -22,18 +22,11 @@ public class BubbleSort {
     }
 
     public static void main(String[] args) {
-        int[] array = {64, 34, 25, 12, 22, 11, 90, 17};
-        System.out.println("Unsorted array:");
-        for (int num : array) {
-            System.out.print(num + " ");
-        }
-        System.out.println();
+        int[] array = {64, 34, 25, 12, 22, 11, 90, 1, 5, 7, 17};
+        System.out.println("Unsorted array: " + Arrays.toString(array)); 
 
         bubbleSort(array);
 
-        System.out.println("Sorted array:");
-        for (int num : array) {
-            System.out.print(num + " ");
-        }
+        System.out.println("Sorted array: " + Arrays.toString(array)); 
     }
 }

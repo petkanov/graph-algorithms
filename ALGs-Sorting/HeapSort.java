@@ -7,19 +7,22 @@ public class HeapSort {
         int[] array = {3, 9, 2, 1, 4, 5, 12, 14, 22, 31};
         System.out.println("Original Array: " + Arrays.toString(array));
 
-        buildMaxHeap(array);
+        heapSort(array);
 
-        System.out.println("Max/Min-Heap Array: " + Arrays.toString(array));
+        System.out.println("Sorted Array: " + Arrays.toString(array));
     }
 
-    public static void buildMaxHeap(int[] array) {
-        // Create Maxheap
-        for (int i = array.length / 2 - 1; i >= 0; i--) {
+    public static void heapSort(int[] array) {
+        // Create Maxheap 
+        for (int i = array.length/2; i >= 0; i--) {
             heapify(array, array.length, i);
         }
+        
+        System.out.println("After Creating Maxheap: " + Arrays.toString(array));
 
-        // Turn into Minheap
-        for (int i = array.length - 1; i > 0; i--) {
+        // Turn into sorted ascending array
+        for (int i = array.length-1; i > 0; i--) {
+
             int temp = array[0];
             array[0] = array[i];
             array[i] = temp;
