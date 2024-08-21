@@ -15,7 +15,7 @@ public class HeapSort {
     public static void heapSort(int[] array) {
         // Create Maxheap 
         for (int i = array.length/2; i >= 0; i--) {
-            heapify(array, array.length, i);
+            heapify(array, i, array.length);
         }
         
         System.out.println("After Creating Maxheap: " + Arrays.toString(array));
@@ -27,14 +27,14 @@ public class HeapSort {
             array[0] = array[i];
             array[i] = temp;
 
-            heapify(array, i, 0);
+            heapify(array, 0, i);
         }
     }
 
-    public static void heapify(int[] array, int maxIndex, int i) {
-        int largestElementIndex = i;
-        int left = 2 * i + 1;
-        int right = 2 * i + 2;
+    public static void heapify(int[] array, int elementIndexToHeapify, int maxIndex) {
+        int largestElementIndex = elementIndexToHeapify;
+        int left = 2 * elementIndexToHeapify + 1;
+        int right = 2 * elementIndexToHeapify + 2;
 
         if (left < maxIndex && array[left] > array[largestElementIndex]) {
             largestElementIndex = left;
@@ -44,12 +44,12 @@ public class HeapSort {
             largestElementIndex = right;
         }
 
-        if (largestElementIndex != i) {
-            int swap = array[i];
-            array[i] = array[largestElementIndex];
+        if (largestElementIndex != elementIndexToHeapify) {
+            int swap = array[elementIndexToHeapify];
+            array[elementIndexToHeapify] = array[largestElementIndex];
             array[largestElementIndex] = swap;
 
-            heapify(array, maxIndex, largestElementIndex);
+            heapify(array, largestElementIndex, maxIndex);
         }
     }
 }
