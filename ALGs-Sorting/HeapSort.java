@@ -1,4 +1,3 @@
-package org.example;
 
 import java.util.Arrays;
 
@@ -13,12 +12,12 @@ public class HeapSort {
     }
 
     public static void heapSort(int[] array) {
-        // Create Maxheap 
+        // Create Priority Queue (Maxheap) 
         for (int i = array.length/2; i >= 0; i--) {
             heapify(array, i, array.length);
         }
         
-        System.out.println("After Creating Maxheap: " + Arrays.toString(array));
+        System.out.println("After Creating Priority Queue (Maxheap): " + Arrays.toString(array));
 
         // Turn into sorted ascending array
         for (int i = array.length-1; i > 0; i--) {
