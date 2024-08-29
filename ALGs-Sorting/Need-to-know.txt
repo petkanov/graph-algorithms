@@ -1,0 +1,75 @@
+Core Algorithms and Data Structures:
+    1. Sorting Algorithms
+        •	Bubble Sort: Simple but inefficient, useful for educational purposes.
+        •	Selection Sort: Another simple algorithm, useful for understanding basic sorting concepts.
+        •	Insertion Sort: Efficient for small datasets and nearly sorted arrays.
+        •	Merge Sort: A divide-and-conquer algorithm, stable, with O(n log n) time complexity.
+        •	Quick Sort: Efficient and widely used, with an average time complexity of O(n log n), but O(n^2) in the worst case.
+        •	Heap Sort: Uses a binary heap data structure, with O(n log n) time complexity.
+    2. Searching Algorithms
+        •	Linear Search: Simple search algorithm with O(n) time complexity.
+        •	Binary Search: Efficient for sorted arrays, with O(log n) time complexity.
+        •	Depth-First Search (DFS): Used for tree/graph traversal, explores as far as possible along each branch.
+        •	Breadth-First Search (BFS): Used for tree/graph traversal, explores all neighbors before moving to the next level.
+    3. Data Structures
+        •	Arrays: Fundamental for storing and accessing elements by index.
+        •	Linked Lists: Useful for dynamic data where elements are frequently inserted or deleted.
+        •	Stacks: Follows LIFO (Last In, First Out) principle, useful for backtracking, undo operations, etc.
+        •	Queues: Follows FIFO (First In, First Out) principle, useful in scheduling tasks, managing resources, etc.
+        •	Hash Tables: Efficient for key-value pair storage and retrieval with average O(1) time complexity.
+        •	Binary Trees: Useful for hierarchical data, like file systems, and efficient searching and sorting.
+        •	Graphs: Used for representing networks, such as social connections, web pages, etc.
+    4. Dynamic Programming
+        •	Fibonacci Sequence: Classic example to understand memoization and dynamic programming.
+        •	Knapsack Problem: Illustrates optimization problems where you maximize a value under a constraint.
+        •	Longest Common Subsequence: Useful for comparison tasks, like diff tools.
+        •	Matrix Chain Multiplication: Shows how to optimize complex calculations by finding the most efficient order.
+    5. Greedy Algorithms
+        •	Dijkstra’s Algorithm: Finds the shortest path from a source to all vertices in a graph.
+        •	Prim’s Algorithm: Finds the minimum spanning tree in a weighted graph.
+        •	Kruskal’s Algorithm: Another approach to find the minimum spanning tree.
+        •	Huffman Coding: Used in data compression, creates optimal prefix codes.
+    6. Divide and Conquer
+        •	Merge Sort: Also falls under this category, where the problem is divided into subproblems, solved individually, and then combined.
+        •	Quick Sort: Similarly, divides the dataset around a pivot.
+        •	Binary Search: This is also a divide-and-conquer approach for searching.
+    7. Backtracking
+        •	N-Queens Problem: Places queens on a chessboard such that no two queens threaten each other.
+        •	Sudoku Solver: Fills in a Sudoku grid by exploring all possible placements.
+        •	Knapsack Problem (0/1): Different approach to the knapsack problem using backtracking.
+    8. String Manipulation
+        •	KMP (Knuth-Morris-Pratt) Algorithm: Efficient string matching algorithm.
+        •	Rabin-Karp Algorithm: Another string matching algorithm, useful for multiple pattern searches.
+        •	Z-Algorithm: Used to find occurrences of a pattern in a text efficiently.
+    9. Mathematical Algorithms
+        •	Euclidean Algorithm: Computes the greatest common divisor (GCD) of two numbers.
+        •	Sieve of Eratosthenes: Finds all prime numbers up to a given limit efficiently.
+        •	Exponentiation by Squaring: Efficient method for computing large powers of a number.
+    10. Graph Algorithms
+        •	DFS and BFS: Essential for exploring nodes in graphs.
+        •	Topological Sorting: Used in scenarios like task scheduling where some tasks must precede others.
+        •	Bellman-Ford Algorithm: Computes shortest paths in a graph where edge weights may be negative.
+        •	Floyd-Warshall Algorithm: Computes shortest paths between all pairs of vertices in a graph.
+    11. Basic Optimization Techniques
+        •	Sliding Window: Optimizes array processing tasks by maintaining a subset of the array elements.
+        •	Two-pointer Technique: Optimizes problems where you need to check pairs of elements in an array.
+        •	Bit Manipulation: Optimizes mathematical operations, like finding whether a number is a power of two.
+
+Additional Topics and Skills:
+	1.	Advanced Data Structures:
+        •	Trie: Efficient for problems involving prefix searches and autocomplete features.
+        •	Segment Trees/Fenwick Trees: Useful for range query problems, like finding the sum or minimum value over a range of elements.
+        •	Disjoint Set (Union-Find): Important for problems involving connectivity in graphs (e.g., finding cycles, Kruskal’s algorithm).
+	2.	Complexity Analysis:
+	    •	Understanding time and space complexity, Big O notation, and how to analyze the efficiency of algorithms is crucial. You should be able to optimize solutions to meet the time constraints often imposed in interview problems.
+	3.	System Design (for Senior/Experienced Roles):
+        •	While entry-level interviews focus on algorithms, senior roles will require you to demonstrate your ability to design scalable, efficient systems.
+        •	Distributed Systems: Understanding concepts like load balancing, data sharding, and replication.
+        •	Scalability: Designing systems that handle millions of users or requests per second.
+        •	APIs and Microservices: Familiarity with RESTful services, API design, and the principles of microservices.
+	4.	Problem-Solving and Practice:
+        •	LeetCode, HackerRank, Codeforces: Regular practice on these platforms is crucial. Companies like Google and Microsoft often draw inspiration from problems similar to those found on these sites.
+        •	Mock Interviews: Participating in mock interviews, either through platforms or with peers, will help simulate the pressure and conditions of real interviews.
+	5.	Soft Skills and Communication:
+        •	Problem Explanation: Clear communication of your thought process during problem-solving is important. Interviewers look for candidates who can explain their approach logically.
+        •	Collaboration: Demonstrating a collaborative attitude and the ability to work through challenges with the interviewer can be a plus.
