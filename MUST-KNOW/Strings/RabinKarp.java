@@ -31,7 +31,6 @@ public class RabinKarp {
                     if (text.charAt(i + j) != pattern.charAt(j))
                         break;
                 }
-
                 // If patternHash == textHash and all characters match
                 if (j == m)
                     result.add(i);
