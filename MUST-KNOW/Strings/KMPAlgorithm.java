@@ -1,26 +1,25 @@
 public class KMPAlgorithm {
 
     private static int[] computeLPSArray(String pattern) {
-        int patternLength = pattern.length();
-        int[] lps = new int[patternLength]; // Longest Prefix-Suffix: Longest Prefix that is same as some suffix part
+        int[] lps = new int[pattern.length()]; // LongestPrefixSuffix: Longest Prefix that is in some part of suffinx at index "i"
 
-        int prefixLengthStreak = 0;
+        int prefixStreakLength = 0;
         int patternIndex = 1;
 
-        while (patternIndex < patternLength) {
+        while (patternIndex < pattern.length()) {
             
-            if (pattern.charAt(prefixLengthStreak) == pattern.charAt(patternIndex)) {
-                prefixLengthStreak++;
-                lps[patternIndex] = prefixLengthStreak;
+            if (pattern.charAt(prefixStreakLength) == pattern.charAt(patternIndex)) {
+                prefixStreakLength++;
+                lps[patternIndex] = prefixStreakLength;
                 patternIndex++;
             }
             else {
-                if (prefixLengthStreak == 0) {
+                if (prefixStreakLength == 0) {
                     lps[patternIndex] = 0;
                     patternIndex++;
                 }
                 else {
-                    prefixLengthStreak = lps[prefixLengthStreak - 1];  // Don't increment patternIndex
+                    prefixStreakLength = lps[prefixStreakLength - 1];
                 }
             }
         }
@@ -28,32 +27,29 @@ public class KMPAlgorithm {
     }
 
     public static void KMPSearch(String pattern, String text) {
-        int patternLength = pattern.length();
-        int textLength = text.length();
-
         int[] lps = computeLPSArray(pattern);
 
         int textIndex = 0;
         int patternIndex = 0;
 
-        while (textIndex < textLength) {
+        while (textIndex < text.length()) {
 
             if (pattern.charAt(patternIndex) == text.charAt(textIndex)) {
                 textIndex++;
                 patternIndex++;
             }
 
-            if (patternIndex == patternLength) {
-                System.out.println("Found pattern at index " + (textIndex - patternIndex));
+            if (patternIndex == pattern.length()) {
+                System.out.println("Found pattern at index " + (textIndex - pattern.length()));
 
                 patternIndex = lps[patternIndex - 1];
             }
             else {
-                if (textIndex < textLength && pattern.charAt(patternIndex) != text.charAt(textIndex)) {
-                    if (patternIndex != 0) {
-                        patternIndex = lps[patternIndex - 1];
-                    } else {
+                if (textIndex < text.length() && pattern.charAt(patternIndex) != text.charAt(textIndex)) {
+                    if (patternIndex == 0) {
                         textIndex++;
+                    } else {
+                        patternIndex = lps[patternIndex - 1];
                     }
                 }
             }
