@@ -58,15 +58,13 @@ public class KMPAlgorithm {
 
     public static void main(String[] args) {
         String text = "ABABABDACDABABCABABAABA";
-        String pattern = "ABAB"; //  lps[] is [0, 0, 1, 2]
-
-        pattern = "ABABD"; //  lps[] is [0, 0, 1, 2, 0]
-//        pattern = "ABAABA";      //  lps[] is [ 0, 0, 1, 1, 2, 3 ]
-//        pattern = "BBABCABBB";
-//      lps[] is [ 010100122 ]
-//        pattern = "ABAABAAA";      //  lps[] is [ 0, 0, 1, 1, 2, 3, 4, 1 ]
-//        pattern = "AAACAAAAAC"; //  lps[] is [0, 1, 2, 0, 1, 2, 3, 3, 3, 4]
-//        pattern = "AAACAACAAAC"; // lps[] is [0, 1, 2, 0, 1, 2, 0, 1, 2, 3, 4]
+        String pattern = "ABAB";   //  lps[] is [0, 0, 1, 2]            found at: 0 2 10 15
+    //    pattern = "ABABD";       //  lps[] is [0 0 1 2 0]             found at: 2
+    //    pattern = "ABAABA";      //  lps[] is [0 0 1 1 2 3]           found at: 17
+    //    pattern = "BBABCABBB";   //  lps[] is [0 1 0 1 0 0 1 2 2]     found at: 
+    //    pattern = "ABAABAAA";    //  lps[] is [0 0 1 1 2 3 4 1]       found at: 
+    //    pattern = "AAACAAAAAC";  //  lps[] is [0 1 2 0 1 2 3 3 3 4]   found at: 
+    //    pattern = "AAACAACAAAC";  // lps[] is [0 1 2 0 1 2 0 1 2 3 4] found at: 
 
         KMPSearch(pattern, text);
     }
