@@ -29,28 +29,24 @@ Core Algorithms and Data Structures:
         •	Prim’s Algorithm: Finds the minimum spanning tree in a weighted graph.
         •	Kruskal’s Algorithm: Another approach to find the minimum spanning tree.
         •	Huffman Coding: Used in data compression, creates optimal prefix codes.
-    6. Divide and Conquer
-        •	Merge Sort: Also falls under this category, where the problem is divided into subproblems, solved individually, and then combined.
-        •	Quick Sort: Similarly, divides the dataset around a pivot.
-        •	Binary Search: This is also a divide-and-conquer approach for searching.
-    7. Backtracking
+    6. Backtracking
         •	N-Queens Problem: Places queens on a chessboard such that no two queens threaten each other.
         •	Sudoku Solver: Fills in a Sudoku grid by exploring all possible placements.
         •	Knapsack Problem (0/1): Different approach to the knapsack problem using backtracking.
-    8. String Manipulation
+    7. String Manipulation
         •	KMP (Knuth-Morris-Pratt) Algorithm: Efficient string matching algorithm.
         •	Rabin-Karp Algorithm: Another string matching algorithm, useful for multiple pattern searches.
         •	Z-Algorithm: Used to find occurrences of a pattern in a text efficiently.
-    9. Mathematical Algorithms
+    8. Mathematical Algorithms
         •	Euclidean Algorithm: Computes the greatest common divisor (GCD) of two numbers.
         •	Sieve of Eratosthenes: Finds all prime numbers up to a given limit efficiently.
         •	Exponentiation by Squaring: Efficient method for computing large powers of a number.
-    10. Graph Algorithms
+    9. Graph Algorithms
         •	DFS and BFS: Essential for exploring nodes in graphs.
         •	Topological Sorting: Used in scenarios like task scheduling where some tasks must precede others.
         •	Bellman-Ford Algorithm: Computes shortest paths in a graph where edge weights may be negative.
         •	Floyd-Warshall Algorithm: Computes shortest paths between all pairs of vertices in a graph.
-    11. Basic Optimization Techniques
+    10. Basic Optimization Techniques
         •	Sliding Window: Optimizes array processing tasks by maintaining a subset of the array elements.
         •	Two-pointer Technique: Optimizes problems where you need to check pairs of elements in an array.
         •	Bit Manipulation: Optimizes mathematical operations, like finding whether a number is a power of two.

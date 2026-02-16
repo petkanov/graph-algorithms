@@ -4,7 +4,7 @@ import java.util.List;
 public class ZAlgorithm {
     public static List<Integer> zSearch(String pattern, String text) {
         // Concatenate pattern, a special character (to avoid overlap), and the text
-        String combined = pattern + "$" + text;
+        String combined = pattern + "$@#$" + text;
         int n = combined.length();
         int[] Z = new int[n];
 
@@ -16,7 +16,7 @@ public class ZAlgorithm {
 
         for (int i = 0; i < n; i++) {
             if (Z[i] == patternLength) {
-                result.add(i - patternLength - 1);
+                result.add(i - patternLength - 4);
             }
         }
         return result;
